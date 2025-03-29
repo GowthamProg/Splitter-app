@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Text, TextInput, View, TouchableOpacity, Alert } from 'react-native';
 import styles from './Styles';
 
-const API_KEY = "AIzaSyBrPB9XtspNc5zAYGLSkm31s3vUqvQSy40";
+const API_KEY = "Your firebase API key";
 
 const LoginScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
