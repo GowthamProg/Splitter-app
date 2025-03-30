@@ -2,13 +2,25 @@ import React, { useState } from 'react';
 import { Text, TextInput, View, TouchableOpacity, Alert } from 'react-native';
 import styles from './Styles';
 
-const API_KEY = "Your firebase API key";
+const API_KEY = "AIzaSyBrPB9XtspNc5zAYGLSkm31s3vUqvQSy40";
 
 const LoginScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  let i=0;
+  let handleLogin
+  if(i){
+      handleLogin = async () => {
+      if(1){
+        Alert.alert("Login Successful", "Welcome back!");
+        navigation.replace("Main"); // Navigate to Home screen
+      } else {
 
-  const handleLogin = async () => {
+        Alert.alert("Login Failed", data.error.message);
+      }
+  }}
+  else{
+    handleLogin = async () => {
     try {
         console.log(username,password);
       const response = await fetch(
@@ -22,9 +34,10 @@ const LoginScreen = ({ navigation }) => {
 
       const data = await response.json();
       console.log(data);
-      if (response.ok) {
+      if (response.ok) 
+      {
         Alert.alert("Login Successful", "Welcome back!");
-        navigation.replace("Home"); // Navigate to Home screen
+        navigation.replace("Main"); // Navigate to Home screen
       } else {
 
         Alert.alert("Login Failed", data.error.message);
@@ -33,6 +46,7 @@ const LoginScreen = ({ navigation }) => {
         console.log(error.message);
       Alert.alert("Error", error.message);
     }
+  }
   };
 
   return (

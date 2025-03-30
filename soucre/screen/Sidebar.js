@@ -1,35 +1,19 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
-import { MaterialIcons } from '@expo/vector-icons';
-
-const Drawer = createDrawerNavigator();
 
 const Sidebar = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Sidebar Menu</Text>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Dashboard')}>
-        <Text style={styles.buttonText}>Dashboard</Text>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
+        <Text style={styles.buttonText}>Home</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Members')}>
-        <Text style={styles.buttonText}>Members</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Option 3</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Option 4</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Option 5</Text>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Friends')}>
+        <Text style={styles.buttonText}>Friends</Text>
       </TouchableOpacity>
     </View>
   );
 };
-
-export default Sidebar;
 
 const styles = StyleSheet.create({
   container: {
@@ -53,3 +37,5 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
 });
+
+export default Sidebar;

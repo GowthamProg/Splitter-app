@@ -2,12 +2,12 @@ import React from 'react';
 import {Text, TextInput, View, TouchableOpacity, Alert } from 'react-native';
 import styles from './Styles'
 
-const HomeScreen = () => {
+const DashboardScreen = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome! 🎉</Text>
+      <Text style={styles.title}>Welcome dashboard! 🎉</Text>
     </View>
   );
 };
 
-export default HomeScreen;
+export default DashboardScreen; 

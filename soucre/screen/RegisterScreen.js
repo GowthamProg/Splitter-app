@@ -9,7 +9,7 @@
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
-    const API ="Your firebase API key";
+    const API ="AIzaSyBrPB9XtspNc5zAYGLSkm31s3vUqvQSy40";
     const handleRegister = async() => {
       if(password!==confirmPassword) {
         console.log("Retype re-password");
